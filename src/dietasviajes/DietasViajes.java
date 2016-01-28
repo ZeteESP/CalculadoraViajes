@@ -12,7 +12,25 @@ package dietasviajes;
  */
 public class DietasViajes {
         
+    private double aloj;
+    private double manu;
+    private int dias;
     
+    public DietasViajes (double aloj,double manu,int dias){
+        this.aloj=aloj;
+        this.manu=manu;
+        this.dias=dias;
+        
+    }
+    public double calculaCoste(){
+     
+        double costeTotal = 0;
+        
+        costeTotal=(aloj*manu)*dias;
+        
+        return costeTotal;
+        
+    }
     
     /**
      * @param args the command line arguments
