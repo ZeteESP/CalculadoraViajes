@@ -384,7 +384,7 @@ public class UIDietas extends javax.swing.JFrame {
             case 40:
                 //Cuba
                 icAloj = 56.50;
-                icManu = 36.06;
+                icManu = 33.06;
                 break;
             case 41:
                 //Republica Dominicana
