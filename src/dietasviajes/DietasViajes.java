@@ -31,7 +31,7 @@ public class DietasViajes {
         this.aloj=aloj*pers;
         this.manu=manu*pers;
         
-        costeTotal=(aloj*manu)*dias;
+        costeTotal=(aloj+manu)*dias;
         
         return costeTotal;
         
