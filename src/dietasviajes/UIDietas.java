@@ -32,7 +32,13 @@ public class UIDietas extends javax.swing.JFrame {
         desplegablePais = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        duracion = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        personas = new javax.swing.JTextField();
+        cAloj = new javax.swing.JLabel();
+        cManu = new javax.swing.JLabel();
+        cTotal = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora Coste Viajes");
@@ -43,8 +49,26 @@ public class UIDietas extends javax.swing.JFrame {
 
         jLabel2.setText("Seleccione país de destino:");
 
-        jTextField1.setMinimumSize(new java.awt.Dimension(30, 20));
-        jTextField1.setPreferredSize(new java.awt.Dimension(30, 25));
+        duracion.setMinimumSize(new java.awt.Dimension(30, 20));
+        duracion.setPreferredSize(new java.awt.Dimension(30, 25));
+
+        jLabel3.setText("Indique nº de personas:");
+
+        personas.setMinimumSize(new java.awt.Dimension(30, 20));
+        personas.setPreferredSize(new java.awt.Dimension(30, 25));
+
+        cAloj.setText("jLabel4");
+
+        cManu.setText("jLabel4");
+
+        cTotal.setText("jLabel4");
+
+        jButton1.setText("Calcular Coste");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -53,12 +77,20 @@ public class UIDietas extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cManu)
+                    .addComponent(cTotal)
+                    .addComponent(jLabel2)
+                    .addComponent(desplegablePais, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(personas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel2)
-                    .addComponent(desplegablePais, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(duracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cAloj))
                 .addContainerGap(195, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -66,14 +98,26 @@ public class UIDietas extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(duracion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(desplegablePais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel1)))
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(personas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cAloj)
+                .addGap(13, 13, 13)
+                .addComponent(cManu)
+                .addGap(13, 13, 13)
+                .addComponent(cTotal)
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -90,6 +134,23 @@ public class UIDietas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        
+         switch (desplegablePais.getSelectedIndex()){
+             
+             case 0:
+                 
+//                DietasViajes viaje = new DietasViajes(65.97,37.4,Integer.parseInt(duracion.toString()),Integer.parseInt(personas.toString()));
+                
+                DietasViajes viaje = new DietasViajes(65.97,37.4,Integer.parseInt(duracion.getText()),Integer.parseInt(personas.getText()));
+             
+                cAloj.setText("El coste máx de Alojamiento es de ");
+                 
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+    }
     /**
      * @param args the command line arguments
      */
@@ -124,12 +185,40 @@ public class UIDietas extends javax.swing.JFrame {
             }
         });
     }
+//        String [] paises1 = { "España", "Reino Unido", "Alemania", "Francia", "Italia", "Estados Unidos", "Suecia", "Suiza", "Austria", "Noruega", "Países Bajos", "Polonia", "Portugal", "Canadá", "Finlandia", "China", "Japón", "India", "Irlanda", "Dinamarca", "Bélgica", "Luxemburgo", "Mexico", "Andorra", "Angola", "Arabia Saudita", "Argelia", "Argentina", "Australia", "Bolivia", "Bosnia-Herzegovina", "Brasil", "Bulgaria", "Camerún", "Chile", "Colombia", "Corea", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "R.Dominicana", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eslovaquia", "Etiopía", "Filipinas", "Gabón", "Ghana", "Grecia", "Guatemala", "Guinea Ecuatorial", "Haití", "Honduras", "Hong Kong", "Hungría", "Indonesia", "Irak", "Iran", "Israel", "Italia", "Jamaica", "Jordania", "Kenia", "Kuwait", "Líbano", "Libia", "Malasia", "Malta", "Marruecos", "Mauritania", "Mozambique", "Nicaragua", "Nigeria", "Nueva Zelanda", "Pakistán", "Panamá", "Paraguay", "Perú", "República Checa", "Rumania", "Rusia", "Senegal", "Singapur", "Siria", "Sudáfrica", "Tailandia", "Taiwán", "Tanzania", "Túnez", "Turquía", "Uruguay", "Venezuela", "Yemen", "Yugoslavia", "Zaire/Congo", "Zimbawe", "Resto del Mundo" };
+//         
+//         for (int i=0; i<paises1.length;i++){
+//             
+//             System.out.println(i+" "+paises1[i]);
+//         }
+    
+    
+//     private void jButton1 (java.awt.event.ActionEvent evt){
+//         
+//         switch (desplegablePais.getSelectedIndex()){
+//             
+//             case 0:
+//                 
+//                DietasViajes viaje = new DietasViajes(65.97,37.4,Integer.parseInt(duracion.toString()),Integer.parseInt(personas.toString()));
+//             
+//                cAloj.setText("El coste máx de Alojamiento es de "+Double.toString(viaje.calculaCosteAloj())+" € ");
+//                 
+//         }
+//         
+//         
+//        }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JLabel cAloj;
+    public javax.swing.JLabel cManu;
+    public javax.swing.JLabel cTotal;
     private javax.swing.JComboBox desplegablePais;
+    private javax.swing.JTextField duracion;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField personas;
     // End of variables declaration//GEN-END:variables
 }
