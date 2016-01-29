@@ -80,13 +80,10 @@ public class UIDietas extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\agraul\\Documents\\NetBeansProjects\\DietasViajes\\images\\Idibaps.jpg")); // NOI18N
 
         cAloj.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cAloj.setText("jLabel7");
 
         cManu.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cManu.setText("jLabel8");
 
         cTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        cTotal.setText("jLabel9");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel7.setText("Datos del Real Decreto 462/2002 a fecha de 30/10/2015 dev A.Grau v1.0");
@@ -156,7 +153,7 @@ public class UIDietas extends javax.swing.JFrame {
                 .addComponent(cManu)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cTotal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addContainerGap())
         );
