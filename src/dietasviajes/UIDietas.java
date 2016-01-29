@@ -43,6 +43,7 @@ public class UIDietas extends javax.swing.JFrame {
         cAloj = new javax.swing.JLabel();
         cManu = new javax.swing.JLabel();
         cTotal = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora Coste Viajes");
@@ -87,6 +88,9 @@ public class UIDietas extends javax.swing.JFrame {
         cTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         cTotal.setText("jLabel9");
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jLabel7.setText("Datos del Real Decreto 462/2002 a fecha de 30/10/2015 dev A.Grau v1.0");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -114,6 +118,10 @@ public class UIDietas extends javax.swing.JFrame {
                         .addComponent(jLabel6))
                     .addComponent(jLabel4))
                 .addContainerGap(89, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,7 +156,9 @@ public class UIDietas extends javax.swing.JFrame {
                 .addComponent(cManu)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cTotal)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -740,6 +750,7 @@ public class UIDietas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField personas;
     // End of variables declaration//GEN-END:variables
