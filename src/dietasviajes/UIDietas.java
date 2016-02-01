@@ -74,10 +74,10 @@ public class UIDietas extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel4.setText("Calculadora Coste Viajes Investigación");
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\agraul\\Documents\\NetBeansProjects\\DietasViajes\\images\\logo_FCRB.gif")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dietasviajes/logo_FCRB.gif"))); // NOI18N
         jLabel5.setPreferredSize(new java.awt.Dimension(100, 50));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\agraul\\Documents\\NetBeansProjects\\DietasViajes\\images\\Idibaps.jpg")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dietasviajes/Idibaps.jpg"))); // NOI18N
 
         cAloj.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
