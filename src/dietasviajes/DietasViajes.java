@@ -28,10 +28,10 @@ public class DietasViajes {
      
         double costeTotal = 0;
         
-        this.aloj=aloj*pers;
-        this.manu=manu*pers;
+//        this.aloj=aloj*pers;
+//        this.manu=manu*pers;
         
-        costeTotal=(aloj+manu)*dias;
+        costeTotal=calculaCosteAloj()+ calculaCosteManu();
         
         return costeTotal;
         
@@ -39,19 +39,22 @@ public class DietasViajes {
     
     public double calculaCosteAloj(){
      
+        if (dias==0){
+            return 0;
+        }else{
         double costeAloj = 0;
                
         costeAloj=(aloj*pers)*dias;
         
         return costeAloj;
-        
+        }
     }
     
     public double calculaCosteManu(){
      
         double costeManu = 0;
                
-        costeManu=(manu*pers)*dias;
+        costeManu=(manu*pers)*(dias+1);
         
         return costeManu;
         
