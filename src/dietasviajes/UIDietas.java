@@ -54,7 +54,7 @@ public class UIDietas extends javax.swing.JFrame {
 
         jLabel2.setText("Seleccione país de destino:");
 
-        duracion.setText("1");
+        duracion.setText("0");
         duracion.setMinimumSize(new java.awt.Dimension(30, 20));
         duracion.setPreferredSize(new java.awt.Dimension(30, 25));
 
